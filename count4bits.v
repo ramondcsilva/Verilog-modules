@@ -1,4 +1,4 @@
-////Autorship: Ramon de Cerqueira Silva
+//Autorship: Ramon de Cerqueira Silva
 //Description: Simple 4 bit counter with enable, reset.
 
 module count4bits(y,clear,enable,clock);
