@@ -1,3 +1,5 @@
+//Autorship: Ramon de Cerqueira Silva
+//Description: 16:4 Multiplexer with inputs and outputs serial, using Case.
 module mux16for4(data0,data1,data2,data3,selector,y);
 
 input [3:0]data0,[3:0]data1,[3:0]data2,[3:0]data3;
