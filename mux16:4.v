@@ -39,9 +39,9 @@ assign wire13 = b3 & ~s0 & s1;
 assign wire14 = c3 & s0 & ~s1;
 assign wire15 = d3 & s0 & s1;
 
-assign Y0 = wire0 | wire1 | wire2 | wire3;
-assign Y1 = wire4 | wire5 | wire6 | wire7;
-assign Y2 = wire8 | wire9 | wire10 | wire11;
-assign Y3 = wire12 | wire13 | wire14 | wire15;
+assign y0 = wire0 | wire1 | wire2 | wire3;
+assign y1 = wire4 | wire5 | wire6 | wire7;
+assign y2 = wire8 | wire9 | wire10 | wire11;
+assign y3 = wire12 | wire13 | wire14 | wire15;
 
 endmodule
