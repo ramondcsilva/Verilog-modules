@@ -11,7 +11,7 @@ input a0,b0,c0,d0;
 input a1,b1,c1,d1;
 input a2,b2,c2,d2;
 input a3,b3,c3,d3;
-
+input s0,s1;
 output y0,y1,y2,y3;
 
 wire wire0,wire1,wire2,wire3;
