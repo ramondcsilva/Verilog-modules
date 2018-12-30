@@ -1,3 +1,6 @@
+//Autorship: Ramon de Cerqueira Silva
+//Description: 16:4 Multiplexer with serial selector using Case.
+
 module mux16for4(a0,b0,c0,d0,a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3,selector,y0,y1,y2,y3);
 
 input a0,b0,c0,d0;
