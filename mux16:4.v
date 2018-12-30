@@ -1,11 +1,6 @@
-module mux16for4(
-	a0,b0,c0,d0,
-	a1,b1,c1,d1,
-	a2,b2,c2,d2,
-	a3,b3,c3,d3,
-	s0,s1,
-	y0,y1,y2,y3
-);
+//Autorship: Ramon de Cerqueira Silva
+//Description: Simple 16:4 Multiplexer.
+module mux16for4(a0,b0,c0,d0,a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3,s0,s1,y0,y1,y2,y3);
 
 input a0,b0,c0,d0;
 input a1,b1,c1,d1;
