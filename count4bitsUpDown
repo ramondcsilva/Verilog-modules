@@ -1,0 +1,20 @@
+//Autorship: Ramon de Cerqueira Silva
+//Description: 4 bit counter with enable, reset, and up/down count.
+module count4bits(y,clear,enable,up_down,clock);
+
+input clock,enable,clear,up_down;
+output [3:0]y;
+reg [3:0]y;
+
+always@(posedge clock)
+begin
+if(clear)
+  y = 4'b0;
+else if(enable)
+	if(up_down)	
+		y <= y + 1;
+	else
+		y <= y - 1;
+end
+
+endmodule
