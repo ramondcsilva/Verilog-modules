@@ -3,7 +3,7 @@ module mux16for4(
 	a1,b1,c1,d1,
 	a2,b2,c2,d2,
 	a3,b3,c3,d3,
-	s0,s1,
+	selector,
 	y0,y1,y2,y3
 );
 
@@ -11,39 +11,20 @@ input a0,b0,c0,d0;
 input a1,b1,c1,d1;
 input a2,b2,c2,d2;
 input a3,b3,c3,d3;
-input s0,s1;
+input selector;
 output y0,y1,y2,y3;
-
-wire wire0,wire1,wire2,wire3;
-wire wire4,wire5,wire6,wire7;
-wire wire8,wire9,wire10,wire11;
-wire wire12,wire13,wire14,wire15;
-
-assign wire0 = a0 & ~s0 & ~s1;
-assign wire1 = b0 & ~s0 & s1;
-assign wire2 = c0 & s0 & ~s1;
-assign wire3 = d0 & s0 & s1;
-
-assign wire4 = a1 & ~s0 & ~s1;
-assign wire5 = b1 & ~s0 & s1;
-assign wire6 = c1 & s0 & ~s1;
-assign wire7 = d1 & s0 & s1;
-
-assign wire8 = a2 & ~s0 & ~s1;
-assign wire9 = b2 & ~s0 & s1;
-assign wire10 = c2 & s0 & ~s1;
-assign wire11 = d2 & s0 & s1;
-
-assign wire12 = a3 & ~s0 & ~s1;
-assign wire13 = b3 & ~s0 & s1;
-assign wire14 = c3 & s0 & ~s1;
-assign wire15 = d3 & s0 & s1;
-
-always@
-
-assign Y0 = wire0 | wire1 | wire2 | wire3;
-assign Y1 = wire4 | wire5 | wire6 | wire7;
-assign Y2 = wire8 | wire9 | wire10 | wire11;
-assign Y3 = wire12 | wire13 | wire14 | wire15;
+reg y0,y1,y2,y3; 	//case sensitive
+	
+always@(selector or a0 or a1 or a2 ou a3 or b0 or b1 or b2 ou b3 or c0 or c1 or c2 ou c3 or d0 or d1 or d2 ou d3){
+	begin
+		case(selector)
+			2'b00:y0 = a0|b0|c0|d0;
+			2'b01:y1 = a1|b1|c1|d1;
+			2'b10:y2 = a2|b2|c2|d2;
+			defaut
+				  y3 = a3|b3|c3|d3;
+		endcase
+	end
+}
 
 endmodule
